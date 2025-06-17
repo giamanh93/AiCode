@@ -1,0 +1,12 @@
+{
+  "name": "construction-materials-mock-api",
+  "version": "1.0.0",
+  "description": "Mock API server for Construction Materials Management System",
+  "main": "setup_mock_server.js",
+  "scripts": {
+    "start": "node setup_mock_server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+} 

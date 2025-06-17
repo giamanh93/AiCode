@@ -1,0 +1,574 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "categoryCode": "CAT001",
+      "categoryName": "Gạch xây dựng",
+      "parentId": null,
+      "description": "Các loại gạch xây dựng",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 2,
+      "categoryCode": "CAT002",
+      "categoryName": "Xi măng",
+      "parentId": null,
+      "description": "Các loại xi măng",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 3,
+      "categoryCode": "CAT003",
+      "categoryName": "Sắt thép",
+      "parentId": null,
+      "description": "Các loại sắt thép xây dựng",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 4,
+      "categoryCode": "CAT004",
+      "categoryName": "Cát đá",
+      "parentId": null,
+      "description": "Các loại cát đá xây dựng",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 5,
+      "categoryCode": "CAT005",
+      "categoryName": "Sơn",
+      "parentId": null,
+      "description": "Các loại sơn",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    }
+  ],
+  "units": [
+    {
+      "id": 1,
+      "unitCode": "UNT001",
+      "unitName": "Viên",
+      "description": "Đơn vị tính theo viên",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 2,
+      "unitCode": "UNT002",
+      "unitName": "Bao",
+      "description": "Đơn vị tính theo bao",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 3,
+      "unitCode": "UNT003",
+      "unitName": "Kg",
+      "description": "Đơn vị tính theo kilogram",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 4,
+      "unitCode": "UNT004",
+      "unitName": "m3",
+      "description": "Đơn vị tính theo mét khối",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 5,
+      "unitCode": "UNT005",
+      "unitName": "Thùng",
+      "description": "Đơn vị tính theo thùng",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "materialCode": "MT001",
+      "materialName": "Gạch đặc 6.5x10.5x22",
+      "categoryId": 1,
+      "unitId": 1,
+      "minStock": 1000,
+      "maxStock": 10000,
+      "description": "Gạch đặc kích thước 6.5x10.5x22",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 2,
+      "materialCode": "MT002",
+      "materialName": "Gạch ống 8x8x19",
+      "categoryId": 1,
+      "unitId": 1,
+      "minStock": 1000,
+      "maxStock": 10000,
+      "description": "Gạch ống kích thước 8x8x19",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 3,
+      "materialCode": "MT003",
+      "materialName": "Xi măng Hà Tiên",
+      "categoryId": 2,
+      "unitId": 2,
+      "minStock": 50,
+      "maxStock": 500,
+      "description": "Xi măng Hà Tiên bao 50kg",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 4,
+      "materialCode": "MT004",
+      "materialName": "Thép Việt Nhật",
+      "categoryId": 3,
+      "unitId": 3,
+      "minStock": 100,
+      "maxStock": 1000,
+      "description": "Thép Việt Nhật phi 6",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 5,
+      "materialCode": "MT005",
+      "materialName": "Cát xây dựng",
+      "categoryId": 4,
+      "unitId": 4,
+      "minStock": 10,
+      "maxStock": 100,
+      "description": "Cát xây dựng loại 1",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 6,
+      "materialCode": "MT006",
+      "materialName": "Sơn nội thất",
+      "categoryId": 5,
+      "unitId": 5,
+      "minStock": 20,
+      "maxStock": 200,
+      "description": "Sơn nội thất cao cấp",
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "supplierCode": "SUP001",
+      "supplierName": "Công ty TNHH Vật liệu Xây dựng ABC",
+      "taxCode": "1234567890",
+      "address": "123 Đường ABC, Quận 1, TP.HCM",
+      "phone": "0123456789",
+      "email": "contact@abc.com",
+      "contactPerson": "Nguyễn Văn A",
+      "bankAccount": "1234567890",
+      "bankName": "Vietcombank",
+      "creditLimit": 1000000000,
+      "paymentTerm": 30,
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 2,
+      "supplierCode": "SUP002",
+      "supplierName": "Công ty CP Vật liệu XYZ",
+      "taxCode": "0987654321",
+      "address": "456 Đường XYZ, Quận 2, TP.HCM",
+      "phone": "0987654321",
+      "email": "contact@xyz.com",
+      "contactPerson": "Trần Văn B",
+      "bankAccount": "0987654321",
+      "bankName": "Techcombank",
+      "creditLimit": 2000000000,
+      "paymentTerm": 45,
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 3,
+      "supplierCode": "SUP003",
+      "supplierName": "Công ty TNHH Thép DEF",
+      "taxCode": "1122334455",
+      "address": "789 Đường DEF, Quận 3, TP.HCM",
+      "phone": "0123456788",
+      "email": "contact@def.com",
+      "contactPerson": "Lê Văn C",
+      "bankAccount": "1122334455",
+      "bankName": "ACB",
+      "creditLimit": 1500000000,
+      "paymentTerm": 30,
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "customerCode": "CUS001",
+      "customerName": "Công ty TNHH Xây dựng 123",
+      "taxCode": "2233445566",
+      "address": "111 Đường 123, Quận 4, TP.HCM",
+      "phone": "0123456777",
+      "email": "contact@123.com",
+      "contactPerson": "Phạm Văn D",
+      "customerType": "Doanh nghiệp",
+      "creditLimit": 500000000,
+      "paymentTerm": 30,
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 2,
+      "customerCode": "CUS002",
+      "customerName": "Công ty CP Xây dựng 456",
+      "taxCode": "3344556677",
+      "address": "222 Đường 456, Quận 5, TP.HCM",
+      "phone": "0123456666",
+      "email": "contact@456.com",
+      "contactPerson": "Hoàng Văn E",
+      "customerType": "Doanh nghiệp",
+      "creditLimit": 1000000000,
+      "paymentTerm": 45,
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 3,
+      "customerCode": "CUS003",
+      "customerName": "Anh Nguyễn Văn F",
+      "taxCode": null,
+      "address": "333 Đường 789, Quận 6, TP.HCM",
+      "phone": "0123456555",
+      "email": "contact@789.com",
+      "contactPerson": "Nguyễn Văn F",
+      "customerType": "Cá nhân",
+      "creditLimit": 100000000,
+      "paymentTerm": 0,
+      "isActive": true,
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "id": 1,
+      "purchaseOrderCode": "PO001",
+      "supplierId": 1,
+      "orderDate": "2024-02-20T00:00:00.000Z",
+      "deliveryDate": "2024-02-25T00:00:00.000Z",
+      "totalAmount": 50000000,
+      "status": "Received",
+      "paymentStatus": "Paid",
+      "notes": "Đơn hàng tháng 1",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null,
+      "details": [
+        {
+          "id": 1,
+          "purchaseOrderId": 1,
+          "materialId": 1,
+          "quantity": 5000,
+          "unitPrice": 5000,
+          "amount": 25000000,
+          "notes": "Gạch đặc"
+        },
+        {
+          "id": 2,
+          "purchaseOrderId": 1,
+          "materialId": 3,
+          "quantity": 100,
+          "unitPrice": 250000,
+          "amount": 25000000,
+          "notes": "Xi măng"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "purchaseOrderCode": "PO002",
+      "supplierId": 2,
+      "orderDate": "2024-03-01T00:00:00.000Z",
+      "deliveryDate": "2024-03-06T00:00:00.000Z",
+      "totalAmount": 75000000,
+      "status": "Received",
+      "paymentStatus": "Partial",
+      "notes": "Đơn hàng tháng 2",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null,
+      "details": [
+        {
+          "id": 3,
+          "purchaseOrderId": 2,
+          "materialId": 2,
+          "quantity": 3000,
+          "unitPrice": 6000,
+          "amount": 18000000,
+          "notes": "Gạch ống"
+        },
+        {
+          "id": 4,
+          "purchaseOrderId": 2,
+          "materialId": 4,
+          "quantity": 500,
+          "unitPrice": 114000,
+          "amount": 57000000,
+          "notes": "Thép"
+        }
+      ]
+    }
+  ],
+  "salesOrders": [
+    {
+      "id": 1,
+      "salesOrderCode": "SO001",
+      "customerId": 1,
+      "orderDate": "2024-02-25T00:00:00.000Z",
+      "deliveryDate": "2024-03-01T00:00:00.000Z",
+      "totalAmount": 30000000,
+      "discountAmount": 0,
+      "taxAmount": 3000000,
+      "grandTotal": 33000000,
+      "status": "Delivered",
+      "paymentStatus": "Paid",
+      "notes": "Đơn hàng tháng 1",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null,
+      "details": [
+        {
+          "id": 1,
+          "salesOrderId": 1,
+          "materialId": 1,
+          "quantity": 3000,
+          "unitPrice": 6000,
+          "amount": 18000000,
+          "notes": "Gạch đặc"
+        },
+        {
+          "id": 2,
+          "salesOrderId": 1,
+          "materialId": 3,
+          "quantity": 50,
+          "unitPrice": 240000,
+          "amount": 12000000,
+          "notes": "Xi măng"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "salesOrderCode": "SO002",
+      "customerId": 2,
+      "orderDate": "2024-03-06T00:00:00.000Z",
+      "deliveryDate": "2024-03-11T00:00:00.000Z",
+      "totalAmount": 45000000,
+      "discountAmount": 4500000,
+      "taxAmount": 4050000,
+      "grandTotal": 44550000,
+      "status": "Delivered",
+      "paymentStatus": "Partial",
+      "notes": "Đơn hàng tháng 2",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null,
+      "details": [
+        {
+          "id": 3,
+          "salesOrderId": 2,
+          "materialId": 2,
+          "quantity": 2000,
+          "unitPrice": 7000,
+          "amount": 14000000,
+          "notes": "Gạch ống"
+        },
+        {
+          "id": 4,
+          "salesOrderId": 2,
+          "materialId": 4,
+          "quantity": 300,
+          "unitPrice": 120000,
+          "amount": 36000000,
+          "notes": "Thép"
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "materialId": 1,
+      "quantity": 2000,
+      "lastUpdated": "2024-03-20T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "materialId": 2,
+      "quantity": 1000,
+      "lastUpdated": "2024-03-20T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "materialId": 3,
+      "quantity": 50,
+      "lastUpdated": "2024-03-20T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "materialId": 4,
+      "quantity": 200,
+      "lastUpdated": "2024-03-20T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "materialId": 5,
+      "quantity": 10,
+      "lastUpdated": "2024-03-20T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "materialId": 6,
+      "quantity": 20,
+      "lastUpdated": "2024-03-20T00:00:00.000Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "paymentCode": "PAY001",
+      "paymentDate": "2024-03-01T00:00:00.000Z",
+      "paymentType": "Purchase",
+      "referenceId": 1,
+      "amount": 50000000,
+      "paymentMethod": "Bank Transfer",
+      "notes": "Thanh toán đơn PO001",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 2,
+      "paymentCode": "PAY002",
+      "paymentDate": "2024-03-11T00:00:00.000Z",
+      "paymentType": "Purchase",
+      "referenceId": 2,
+      "amount": 25000000,
+      "paymentMethod": "Bank Transfer",
+      "notes": "Thanh toán đơn PO002",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 3,
+      "paymentCode": "PAY003",
+      "paymentDate": "2024-03-06T00:00:00.000Z",
+      "paymentType": "Sales",
+      "referenceId": 1,
+      "amount": 33000000,
+      "paymentMethod": "Cash",
+      "notes": "Thanh toán đơn SO001",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    },
+    {
+      "id": 4,
+      "paymentCode": "PAY004",
+      "paymentDate": "2024-03-16T00:00:00.000Z",
+      "paymentType": "Sales",
+      "referenceId": 2,
+      "amount": 20000000,
+      "paymentMethod": "Bank Transfer",
+      "notes": "Thanh toán đơn SO002",
+      "createdBy": 1,
+      "createdDate": "2024-03-20T00:00:00.000Z",
+      "modifiedBy": null,
+      "modifiedDate": null
+    }
+  ]
+} 
