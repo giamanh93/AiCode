@@ -1,59 +1,65 @@
-# AngularPrimeTailwind
+# Angular PrimeNG Tailwind Integration
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+This project demonstrates the integration of Angular 17 with PrimeNG and Tailwind CSS.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Angular 17
+- PrimeNG v19
+- Tailwind CSS
+- Dark mode support
+- Responsive design
 
+## Development
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run development server:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+3. Build for production:
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Project Structure
 
-## Running unit tests
+- `src/app/components/` - Angular components
+- `src/styles.scss` - Global styles
+- `tailwind.config.js` - Tailwind configuration
+- `angular.json` - Angular configuration
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Git Workflow
 
+1. Create feature branch:
 ```bash
-ng test
+git checkout -b feature/your-feature-name
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+2. Make changes and commit:
 ```bash
-ng e2e
+git add .
+git commit -m "feat: your commit message"
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Push changes:
+```bash
+git push origin feature/your-feature-name
+```
 
-## Additional Resources
+4. Create pull request on GitHub
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Commit Message Convention
+
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation changes
+- `style:` - Code style changes
+- `refactor:` - Code refactoring
+- `test:` - Adding tests
+- `chore:` - Maintenance tasks
