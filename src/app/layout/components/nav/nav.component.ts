@@ -18,6 +18,7 @@ export class NavComponent {
     { icon: 'pi pi-box', label: 'Sản phẩm', route: '/products' },
     { icon: 'pi pi-file', label: 'Đơn hàng', route: '/orders' },
     { icon: 'pi pi-chart-bar', label: 'Báo cáo', route: '/reports' },
-    { icon: 'pi pi-cog', label: 'Cài đặt', route: '/settings' }
+    { icon: 'pi pi-cog', label: 'Cài đặt', route: '/settings' },
+    { icon: 'pi pi-pencil', label: 'Form Demo', route: '/form-demo' }
   ];
 } 

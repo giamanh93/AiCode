@@ -70,6 +70,69 @@
     {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
     {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
+  "categories_form_fields": {
+    "formGroupTitle": "Thông tin categories",
+    "fields": [
+      {
+        "key": "categoryCode",
+        "label": "Mã Danh Mục",
+        "required": false,
+        "columns": "col-12 md:col-6",
+        "validators": {},
+        "type": "input",
+        "placeholder": "Mã tự động hoặc nhập tay",
+        "helpText": "Để trống để hệ thống tự tạo mã."
+      },
+      {
+        "key": "categoryName",
+        "label": "Tên Danh Mục",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Tên Danh Mục"
+      },
+      {
+        "key": "parentId",
+        "label": "ID Cha",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "select",
+        "options": [],
+        "placeholder": "Chọn ID Cha"
+      },
+      {
+        "key": "description",
+        "label": "Mô Tả",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "textarea"
+      },
+      {
+        "key": "isActive",
+        "label": "Trạng Thái",
+        "required": true,
+        "columns": "col-12",
+        "validators": {
+          "required": true
+        },
+        "type": "checkbox"
+      }
+    ],
+    "submitButtonText": "Lưu lại",
+    "cancelButtonText": "Hủy bỏ",
+    "showCancelButton": true,
+    "layout": "vertical",
+    "size": "normal"
+  },
   "units": [
     {
       "id": 1,
@@ -135,6 +198,57 @@
     {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
     {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
+  "units_form_fields": {
+    "formGroupTitle": "Thông tin units",
+    "fields": [
+      {
+        "key": "unitCode",
+        "label": "Mã ĐVT",
+        "required": false,
+        "columns": "col-12 md:col-6",
+        "validators": {},
+        "type": "input",
+        "placeholder": "Mã tự động hoặc nhập tay",
+        "helpText": "Để trống để hệ thống tự tạo mã."
+      },
+      {
+        "key": "unitName",
+        "label": "Tên Đơn Vị Tính",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Tên Đơn Vị Tính"
+      },
+      {
+        "key": "description",
+        "label": "Mô Tả",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "textarea"
+      },
+      {
+        "key": "isActive",
+        "label": "Trạng Thái",
+        "required": true,
+        "columns": "col-12",
+        "validators": {
+          "required": true
+        },
+        "type": "checkbox"
+      }
+    ],
+    "submitButtonText": "Lưu lại",
+    "cancelButtonText": "Hủy bỏ",
+    "showCancelButton": true,
+    "layout": "vertical",
+    "size": "normal"
+  },
   "materials": [
     {
       "id": 1,
@@ -238,6 +352,91 @@
     {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
     {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
+  "materials_form_fields": {
+    "formGroupTitle": "Thông tin materials",
+    "fields": [
+      {
+        "key": "materialCode",
+        "label": "Mã Vật Tư",
+        "required": false,
+        "columns": "col-12 md:col-6",
+        "validators": {},
+        "type": "input",
+        "placeholder": "Mã tự động hoặc nhập tay",
+        "helpText": "Để trống để hệ thống tự tạo mã."
+      },
+      {
+        "key": "materialName",
+        "label": "Tên Vật Tư",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Tên Vật Tư"
+      },
+      {
+        "key": "categoryId",
+        "label": "ID Danh Mục",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "select",
+        "options": [],
+        "placeholder": "Chọn ID Danh Mục"
+      },
+      {
+        "key": "unitId",
+        "label": "ID ĐVT",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "select",
+        "options": [],
+        "placeholder": "Chọn ID ĐVT"
+      },
+      {
+        "key": "minStock",
+        "label": "Tồn Kho Tối Thiểu",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "number"
+      },
+      {
+        "key": "maxStock",
+        "label": "Tồn Kho Tối Đa",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "number"
+      },
+      {
+        "key": "isActive",
+        "label": "Trạng Thái",
+        "required": true,
+        "columns": "col-12",
+        "validators": {
+          "required": true
+        },
+        "type": "checkbox"
+      }
+    ],
+    "submitButtonText": "Lưu lại",
+    "cancelButtonText": "Hủy bỏ",
+    "showCancelButton": true,
+    "layout": "vertical",
+    "size": "normal"
+  },
   "suppliers": [
     {
       "id": 1,
@@ -309,6 +508,101 @@
     {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
     {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
+  "suppliers_form_fields": {
+    "formGroupTitle": "Thông tin suppliers",
+    "fields": [
+      {
+        "key": "supplierCode",
+        "label": "Mã NCC",
+        "required": false,
+        "columns": "col-12 md:col-6",
+        "validators": {},
+        "type": "input",
+        "placeholder": "Mã tự động hoặc nhập tay",
+        "helpText": "Để trống để hệ thống tự tạo mã."
+      },
+      {
+        "key": "supplierName",
+        "label": "Tên Nhà Cung Cấp",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Tên Nhà Cung Cấp"
+      },
+      {
+        "key": "taxCode",
+        "label": "Mã Số Thuế",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Mã Số Thuế"
+      },
+      {
+        "key": "address",
+        "label": "Địa Chỉ",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "textarea"
+      },
+      {
+        "key": "phone",
+        "label": "Số Điện Thoại",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "09..."
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true,
+          "email": true
+        },
+        "type": "email"
+      },
+      {
+        "key": "contactPerson",
+        "label": "Người Liên Hệ",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Người Liên Hệ"
+      },
+      {
+        "key": "isActive",
+        "label": "Trạng Thái",
+        "required": true,
+        "columns": "col-12",
+        "validators": {
+          "required": true
+        },
+        "type": "checkbox"
+      }
+    ],
+    "submitButtonText": "Lưu lại",
+    "cancelButtonText": "Hủy bỏ",
+    "showCancelButton": true,
+    "layout": "vertical",
+    "size": "normal"
+  },
   "customers": [
     {
       "id": 1,
@@ -380,6 +674,101 @@
     {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
     {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
+  "customers_form_fields": {
+    "formGroupTitle": "Thông tin customers",
+    "fields": [
+      {
+        "key": "customerCode",
+        "label": "Mã Khách Hàng",
+        "required": false,
+        "columns": "col-12 md:col-6",
+        "validators": {},
+        "type": "input",
+        "placeholder": "Mã tự động hoặc nhập tay",
+        "helpText": "Để trống để hệ thống tự tạo mã."
+      },
+      {
+        "key": "customerName",
+        "label": "Tên Khách Hàng",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Tên Khách Hàng"
+      },
+      {
+        "key": "phone",
+        "label": "Số Điện Thoại",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "09..."
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true,
+          "email": true
+        },
+        "type": "email"
+      },
+      {
+        "key": "customerType",
+        "label": "Loại Khách Hàng",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Loại Khách Hàng"
+      },
+      {
+        "key": "contactPerson",
+        "label": "Người Liên Hệ",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "input",
+        "placeholder": "Nhập Người Liên Hệ"
+      },
+      {
+        "key": "address",
+        "label": "Địa Chỉ",
+        "required": true,
+        "columns": "col-12 md:col-6",
+        "validators": {
+          "required": true
+        },
+        "type": "textarea"
+      },
+      {
+        "key": "isActive",
+        "label": "Trạng Thái",
+        "required": true,
+        "columns": "col-12",
+        "validators": {
+          "required": true
+        },
+        "type": "checkbox"
+      }
+    ],
+    "submitButtonText": "Lưu lại",
+    "cancelButtonText": "Hủy bỏ",
+    "showCancelButton": true,
+    "layout": "vertical",
+    "size": "normal"
+  },
   "purchaseOrders": [
     {
       "id": 1,

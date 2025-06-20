@@ -1,0 +1,243 @@
+<p-card [header]="config.formGroupTitle" styleClass="w-full">
+  <form [formGroup]="form" (ngSubmit)="handleSubmit()" class="p-fluid">
+    <div class="grid">
+      <ng-container *ngFor="let field of config.fields">
+        <div *ngIf="isFieldVisible(field)" [class]="getFieldClass(field)" class="mb-3">
+          
+          <!-- Input Text -->
+          <div *ngIf="field.type === 'input'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <input 
+              pInputText 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [placeholder]="field.placeholder"
+              [readonly]="field.readonly ?? false"
+              [disabled]="field.disabled ?? false"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)">
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+            <small *ngIf="field.helpText" class="text-gray-500 block mt-1">
+              {{ field.helpText }}
+            </small>
+          </div>
+
+          <!-- Textarea -->
+          <div *ngIf="field.type === 'textarea'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <textarea 
+              pInputTextarea 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [placeholder]="field.placeholder"
+              [readonly]="field.readonly ?? false"
+              [disabled]="field.disabled ?? false"
+              [rows]="3"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)">
+            </textarea>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Select -->
+          <div *ngIf="field.type === 'select'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <p-dropdown 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [options]="field.options"
+              optionLabel="label"
+              optionValue="value"
+              [placeholder]="field.placeholder"
+              [disabled]="field.disabled ?? false"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)">
+            </p-dropdown>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Checkbox -->
+          <div *ngIf="field.type === 'checkbox'" class="field">
+            <div class="flex items-center">
+              <p-checkbox 
+                [id]="field.key"
+                [formControlName]="field.key"
+                [binary]="true"
+                [disabled]="field.disabled ?? false"
+                [class.ng-invalid]="isFieldInvalid(field.key)"
+                [class.ng-dirty]="isFieldInvalid(field.key)">
+              </p-checkbox>
+              <label [for]="field.key" class="ml-2 text-sm font-medium text-gray-700">
+                {{ field.label }}
+                <span *ngIf="field.required" class="text-red-500">*</span>
+              </label>
+            </div>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Radio Button -->
+          <div *ngIf="field.type === 'radio'" class="field">
+            <label class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <div class="flex flex-col gap-2">
+              <div *ngFor="let option of field.options" class="flex items-center">
+                <p-radioButton 
+                  [name]="field.key"
+                  [value]="option.value"
+                  [formControlName]="field.key"
+                  [disabled]="field.disabled ?? false">
+                </p-radioButton>
+                <label class="ml-2 text-sm text-gray-700">{{ option.label }}</label>
+              </div>
+            </div>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Date -->
+          <div *ngIf="field.type === 'date'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <p-calendar 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [placeholder]="field.placeholder"
+              [disabled]="field.disabled ?? false"
+              dateFormat="dd/mm/yy"
+              [showIcon]="true"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)">
+            </p-calendar>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Number -->
+          <div *ngIf="field.type === 'number'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <p-inputNumber 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [placeholder]="field.placeholder"
+              [disabled]="field.disabled ?? false"
+              [minFractionDigits]="0"
+              [maxFractionDigits]="2"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)">
+            </p-inputNumber>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Email -->
+          <div *ngIf="field.type === 'email'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <input 
+              pInputText 
+              type="email"
+              [id]="field.key"
+              [formControlName]="field.key"
+              [placeholder]="field.placeholder"
+              [readonly]="field.readonly ?? false"
+              [disabled]="field.disabled ?? false"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)">
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- Password -->
+          <div *ngIf="field.type === 'password'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <p-password 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [placeholder]="field.placeholder"
+              [disabled]="field.disabled ?? false"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)"
+              [toggleMask]="true">
+            </p-password>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+          <!-- File Upload -->
+          <div *ngIf="field.type === 'file'" class="field">
+            <label [for]="field.key" class="block text-sm font-medium text-gray-700 mb-2">
+              {{ field.label }}
+              <span *ngIf="field.required" class="text-red-500">*</span>
+            </label>
+            <p-fileUpload 
+              [id]="field.key"
+              [formControlName]="field.key"
+              [disabled]="field.disabled ?? false"
+              [class.ng-invalid]="isFieldInvalid(field.key)"
+              [class.ng-dirty]="isFieldInvalid(field.key)"
+              mode="basic"
+              [auto]="true"
+              chooseLabel="Chọn file"
+              [maxFileSize]="1000000">
+            </p-fileUpload>
+            <small *ngIf="getFieldError(field.key)" class="p-error block mt-1">
+              {{ getFieldError(field.key) }}
+            </small>
+          </div>
+
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Form Actions -->
+    <div class="flex justify-end gap-3 mt-6">
+      <p-button 
+        *ngIf="config.showCancelButton !== false"
+        type="button" 
+        [label]="config.cancelButtonText || 'Hủy'"
+        (onClick)="handleCancel()"
+        styleClass="p-button-outlined">
+      </p-button>
+      <p-button 
+        type="submit" 
+        [label]="config.submitButtonText || 'Lưu'"
+        [loading]="loading"
+        [disabled]="loading">
+      </p-button>
+    </div>
+  </form>
+</p-card> 
