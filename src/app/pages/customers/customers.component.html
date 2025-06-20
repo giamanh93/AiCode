@@ -1,0 +1,133 @@
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+
+<div class="p-4">
+  <!-- Header Section với Breadcrumb -->
+  <div class="mb-6">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Danh sách Khách hàng</h2>
+        <p-breadcrumb class="mt-2" [model]="items" [home]="home"></p-breadcrumb>
+      </div>
+      <div class="flex gap-3">
+        <!-- Filter Button với Popover -->
+        <p-button 
+          (click)="filterPopover.toggle($event)"
+          icon="pi pi-filter" 
+          label="Bộ lọc"
+          [badge]="filterCount > 0 ? filterCount.toString() : ''"
+          styleClass="p-button-outlined p-button-sm">
+        </p-button>
+        
+        <p-button 
+          label="Xóa mục đã chọn" 
+          icon="pi pi-trash" 
+          [disabled]="selectedCustomers.length === 0"
+          (onClick)="deleteSelectedCustomers()" 
+          styleClass="p-button-danger p-button-sm">
+        </p-button>
+        <p-button 
+          label="Thêm mới" 
+          icon="pi pi-plus" 
+          styleClass="p-button-primary p-button-sm">
+        </p-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Popover -->
+  <p-popover #filterPopover>
+    <div class="flex flex-col gap-4 w-80">
+      <div class="flex justify-between items-center">
+        <span class="font-medium text-gray-900">Bộ lọc khách hàng</span>
+        <p-button 
+          icon="pi pi-times" 
+          (onClick)="filterPopover.hide()"
+          styleClass="p-button-text p-button-sm">
+        </p-button>
+      </div>
+      
+      <!-- Mã số thuế filter -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Mã số thuế</label>
+        <input 
+          pInputText 
+          type="text" 
+          [(ngModel)]="taxCodeFilter"
+          (input)="onTaxCodeFilterChange()"
+          placeholder="Nhập mã số thuế..."
+          class="w-full">
+      </div>
+      
+      <!-- Số điện thoại filter -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Số điện thoại</label>
+        <input 
+          pInputText 
+          type="text" 
+          [(ngModel)]="phoneFilter"
+          (input)="onPhoneFilterChange()"
+          placeholder="Nhập số điện thoại..."
+          class="w-full">
+      </div>
+      
+      <!-- Trạng thái filter -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Trạng thái</label>
+        <p-dropdown 
+          [options]="statusOptions" 
+          [(ngModel)]="statusFilter"
+          (onChange)="onStatusFilterChange()"
+          optionLabel="label"
+          optionValue="value"
+          placeholder="Chọn trạng thái"
+          styleClass="w-full">
+        </p-dropdown>
+      </div>
+      
+      <!-- Action buttons -->
+      <div class="flex gap-2 pt-2">
+        <p-button 
+          label="Xóa bộ lọc" 
+          icon="pi pi-times" 
+          (onClick)="clearFilters()" 
+          styleClass="p-button-outlined p-button-sm flex-1">
+        </p-button>
+        <p-button 
+          label="Áp dụng" 
+          icon="pi pi-check" 
+          (onClick)="filterPopover.hide()"
+          styleClass="p-button-primary p-button-sm flex-1">
+        </p-button>
+      </div>
+    </div>
+  </p-popover>
+
+  <!-- Table Section với Box Shadow -->
+  <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+    <div class="p-4">
+      <ng-container *ngIf="{ customers: filteredCustomers$ | async, columns: columns$ | async } as data">
+        <app-common-table 
+          *ngIf="data.customers && data.columns"
+          [data]="data.customers" 
+          [columns]="data.columns"
+          [(selection)]="selectedCustomers"
+          dataKey="id"
+          selectionMode="multiple"
+          [metaKeySelection]="false"
+          [showGridlines]="true"
+          [stripedRows]="true"
+          size="small"
+          [paginator]="true"
+          [rows]="10"
+          [rowsPerPageOptions]="[10, 25, 50]"
+          [showCurrentPageReport]="true"
+          currentPageReportTemplate="Hiển thị {first} đến {last} của {totalRecords} bản ghi"
+          (action)="handleAction($event)"
+          (onRowSelect)="onRowSelect($event)"
+          (onRowUnselect)="onRowUnselect($event)">
+        </app-common-table>
+      </ng-container>
+    </div>
+  </div>
+</div> 

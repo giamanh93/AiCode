@@ -31,6 +31,7 @@ server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
   console.log(`API endpoints available at:`);
   console.log(`- http://localhost:${port}/categories`);
+  console.log(`- http://localhost:${port}/inventory_fields`);
   console.log(`- http://localhost:${port}/units`);
   console.log(`- http://localhost:${port}/materials`);
   console.log(`- http://localhost:${port}/suppliers`);

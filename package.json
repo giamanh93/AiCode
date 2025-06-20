@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-prime-tailwind": "node dist/angular-prime-tailwind/server/server.mjs"
+    "serve:ssr:angular-prime-tailwind": "node dist/angular-prime-tailwind/server/server.mjs",
+    "serve:api": "json-server --watch \"Tài liệu/Admin/Database/mock_data.json\""
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,7 @@
     "@types/node": "^18.18.0",
     "autoprefixer": "^10.4.21",
     "jasmine-core": "~5.4.0",
+    "json-server": "^1.0.0-beta.3",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

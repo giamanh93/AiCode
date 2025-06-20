@@ -61,6 +61,15 @@
       "modifiedDate": null
     }
   ],
+  "categories_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "categoryCode", "label": "Mã Danh Mục", "type": "text", "visible": true, "sortable": true},
+    {"field": "categoryName", "label": "Tên Danh Mục", "type": "text", "visible": true, "sortable": true},
+    {"field": "parentId", "label": "ID Cha", "type": "number", "visible": true},
+    {"field": "description", "label": "Mô Tả", "type": "text", "visible": true, "width": "300px"},
+    {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
+  ],
   "units": [
     {
       "id": 1,
@@ -117,6 +126,14 @@
       "modifiedBy": null,
       "modifiedDate": null
     }
+  ],
+  "units_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "unitCode", "label": "Mã ĐVT", "type": "text", "visible": true, "sortable": true},
+    {"field": "unitName", "label": "Tên Đơn Vị Tính", "type": "text", "visible": true, "sortable": true},
+    {"field": "description", "label": "Mô Tả", "type": "text", "visible": true, "width": "300px"},
+    {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
   "materials": [
     {
@@ -210,6 +227,17 @@
       "modifiedDate": null
     }
   ],
+  "materials_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "materialCode", "label": "Mã Vật Tư", "type": "text", "visible": true, "sortable": true},
+    {"field": "materialName", "label": "Tên Vật Tư", "type": "text", "visible": true, "sortable": true, "width": "250px"},
+    {"field": "categoryId", "label": "ID Danh Mục", "type": "number", "visible": true},
+    {"field": "unitId", "label": "ID ĐVT", "type": "number", "visible": true},
+    {"field": "minStock", "label": "Tồn Kho Tối Thiểu", "type": "number", "visible": true, "align": "right"},
+    {"field": "maxStock", "label": "Tồn Kho Tối Đa", "type": "number", "visible": true, "align": "right"},
+    {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
+  ],
   "suppliers": [
     {
       "id": 1,
@@ -269,6 +297,18 @@
       "modifiedDate": null
     }
   ],
+  "suppliers_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "supplierCode", "label": "Mã NCC", "type": "text", "visible": true, "sortable": true},
+    {"field": "supplierName", "label": "Tên Nhà Cung Cấp", "type": "text", "visible": true, "sortable": true, "width": "250px"},
+    {"field": "taxCode", "label": "Mã Số Thuế", "type": "text", "visible": true},
+    {"field": "address", "label": "Địa Chỉ", "type": "text", "visible": true, "width": "300px"},
+    {"field": "phone", "label": "Điện Thoại", "type": "text", "visible": true},
+    {"field": "email", "label": "Email", "type": "text", "visible": true},
+    {"field": "contactPerson", "label": "Người Liên Hệ", "type": "text", "visible": true},
+    {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
+  ],
   "customers": [
     {
       "id": 1,
@@ -324,6 +364,21 @@
       "modifiedBy": null,
       "modifiedDate": null
     }
+  ],
+  "customers_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "customerCode", "label": "Mã KH", "type": "text", "visible": true, "sortable": true},
+    {"field": "customerName", "label": "Tên Khách Hàng", "type": "text", "visible": true, "sortable": true, "width": "250px"},
+    {"field": "taxCode", "label": "Mã Số Thuế", "type": "text", "visible": true},
+    {"field": "address", "label": "Địa Chỉ", "type": "text", "visible": true, "width": "300px"},
+    {"field": "phone", "label": "Điện Thoại", "type": "text", "visible": true},
+    {"field": "email", "label": "Email", "type": "text", "visible": true},
+    {"field": "contactPerson", "label": "Người Liên Hệ", "type": "text", "visible": true},
+    {"field": "customerType", "label": "Loại KH", "type": "text", "visible": true},
+    {"field": "creditLimit", "label": "Hạn Mức", "type": "number", "visible": true, "align": "right"},
+    {"field": "paymentTerm", "label": "Hạn Nợ", "type": "number", "visible": true, "align": "center"},
+    {"field": "isActive", "label": "Trạng Thái", "type": "boolean", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
   "purchaseOrders": [
     {
@@ -396,6 +451,17 @@
         }
       ]
     }
+  ],
+  "purchaseOrders_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "purchaseOrderCode", "label": "Mã Đơn Mua", "type": "text", "visible": true, "sortable": true},
+    {"field": "supplierId", "label": "ID NCC", "type": "number", "visible": true},
+    {"field": "orderDate", "label": "Ngày Đặt", "type": "date", "visible": true, "sortable": true},
+    {"field": "deliveryDate", "label": "Ngày Giao", "type": "date", "visible": true, "sortable": true},
+    {"field": "totalAmount", "label": "Tổng Tiền", "type": "number", "visible": true, "align": "right"},
+    {"field": "status", "label": "Trạng Thái Đơn", "type": "text", "visible": true},
+    {"field": "paymentStatus", "label": "Trạng Thái TT", "type": "text", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
   "salesOrders": [
     {
@@ -475,6 +541,17 @@
       ]
     }
   ],
+  "salesOrders_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "salesOrderCode", "label": "Mã Đơn Bán", "type": "text", "visible": true, "sortable": true},
+    {"field": "customerId", "label": "ID KH", "type": "number", "visible": true},
+    {"field": "orderDate", "label": "Ngày Đặt", "type": "date", "visible": true, "sortable": true},
+    {"field": "deliveryDate", "label": "Ngày Giao", "type": "date", "visible": true, "sortable": true},
+    {"field": "grandTotal", "label": "Thành Tiền", "type": "number", "visible": true, "align": "right"},
+    {"field": "status", "label": "Trạng Thái Đơn", "type": "text", "visible": true},
+    {"field": "paymentStatus", "label": "Trạng Thái TT", "type": "text", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
+  ],
   "inventory": [
     {
       "id": 1,
@@ -512,6 +589,13 @@
       "quantity": 20,
       "lastUpdated": "2024-03-20T00:00:00.000Z"
     }
+  ],
+  "inventory_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "materialId", "label": "ID Vật Tư", "type": "number", "visible": true},
+    {"field": "quantity", "label": "Số Lượng", "type": "number", "visible": true, "align": "right"},
+    {"field": "lastUpdated", "label": "Cập Nhật Lần Cuối", "type": "date", "visible": true, "sortable": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ],
   "payments": [
     {
@@ -570,5 +654,15 @@
       "modifiedBy": null,
       "modifiedDate": null
     }
+  ],
+  "payments_fields": [
+    {"field": "id", "label": "ID", "type": "number", "visible": false},
+    {"field": "paymentCode", "label": "Mã Phiếu Chi", "type": "text", "visible": true, "sortable": true},
+    {"field": "paymentDate", "label": "Ngày Chi", "type": "date", "visible": true, "sortable": true},
+    {"field": "paymentType", "label": "Loại Chi", "type": "text", "visible": true},
+    {"field": "referenceId", "label": "ID Tham Chiếu", "type": "number", "visible": true},
+    {"field": "amount", "label": "Số Tiền", "type": "number", "visible": true, "align": "right"},
+    {"field": "paymentMethod", "label": "Phương Thức TT", "type": "text", "visible": true},
+    {"field": "actions", "label": "Thao Tác", "type": "custom", "visible": true, "align": "center"}
   ]
 } 
