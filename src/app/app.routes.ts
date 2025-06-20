@@ -1,7 +1,20 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
+import { LayoutComponent } from './layout/layout.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'customers', component: DashboardComponent }, // Placeholder
+      { path: 'products', component: DashboardComponent }, // Placeholder
+      { path: 'orders', component: DashboardComponent }, // Placeholder
+      { path: 'reports', component: DashboardComponent }, // Placeholder
+      { path: 'settings', component: DashboardComponent }, // Placeholder
+    ]
+  },
   { path: '**', redirectTo: '' }
 ];

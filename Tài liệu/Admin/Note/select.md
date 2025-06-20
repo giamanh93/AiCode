@@ -175,3 +175,42 @@ nz-selectcomponent#
 Name	Description
 blur()	Remove focus
 focus()	Get focus
+
+## Note: Phương án Layout Sidebar Collapsible (Sidebar thu gọn hiện đại)
+
+**Mô tả:**
+- Sidebar có thể thu gọn/mở rộng, giúp tiết kiệm không gian màn hình.
+- Sidebar chứa các icon đại diện cho các module (Dashboard, Khách hàng, Sản phẩm, Đơn hàng, Báo cáo, Cài đặt).
+- Khi thu gọn chỉ hiển thị icon, khi mở rộng hiển thị cả tên module.
+- Header phía trên chứa logo, tên hệ thống, tìm kiếm, user menu, notification.
+- Footer phía dưới hiển thị thông tin bản quyền, link, version.
+- Phù hợp với giao diện hiện đại, tối ưu cho desktop và responsive tốt trên mobile.
+
+**Ưu điểm:**
+- Tiết kiệm không gian, hiện đại, dễ sử dụng.
+- Dễ dàng mở rộng thêm module mới.
+- Trải nghiệm người dùng tốt trên nhiều thiết bị.
+
+**Nhược điểm:**
+- Cần thêm animation và logic cho việc thu gọn/mở rộng.
+- Người dùng mới có thể cần thời gian làm quen với icon.
+
+**Wireframe tổng quan:**
+```
+┌─────────────────────────────────────────────────────────┐
+│                    HEADER                               │
+│  [Menu Toggle] [Logo] [Search] [User] [Notifications]   │
+├─────────────────────────────────────────────────────────┤
+│ SIDEBAR │                    MAIN CONTENT              │
+│ (Collapsed)│                                         │
+│ [≡] [🏠]   │                                         │
+│ [≡] [👥]   │                                         │
+│ [≡] [📦]   │                                         │
+│ [≡] [📋]   │                                         │
+│ [≡] [📊]   │                                         │
+│ [≡] [⚙️]   │                                         │
+├─────────┴─────────────────────────────────────────────┤
+│                    FOOTER                             │
+│  [Copyright] [Links] [Version]                        │
+└─────────────────────────────────────────────────────────┘
+```

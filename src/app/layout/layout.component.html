@@ -1,0 +1,19 @@
+<!-- Layout tổng thể: Header, Sidebar, Main, Footer -->
+<div class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <app-header (toggleSidebar)="toggleSidebar()"></app-header>
+
+  <div class="flex flex-1 min-h-0">
+    <!-- Sidebar -->
+    <app-sidebar [isCollapsed]="isSidebarCollapsed"></app-sidebar>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 bg-gray-50 overflow-auto">
+      <router-outlet></router-outlet>
+      <!-- Nội dung chính sẽ hiển thị ở đây -->
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+</div> 
